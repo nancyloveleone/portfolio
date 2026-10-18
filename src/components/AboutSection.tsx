@@ -20,6 +20,7 @@ export const AboutSection: React.FC = () => {
                 className="about-portrait-img"
                 loading="lazy"
                 decoding="async"
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="about-portrait-caption">

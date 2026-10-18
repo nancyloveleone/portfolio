@@ -35,8 +35,8 @@ const INCLUDED_DIRS = [
 function copyRecursive(src, dest) {
   const stat = fs.statSync(src);
   if (stat.isDirectory()) {
-    // Skip public/images/albums
-    if (src.endsWith(path.join('public', 'images', 'albums'))) {
+    // Skip public/images (all assets are hosted remotely on TurboImageHost CDN)
+    if (src.endsWith(path.join('public', 'images'))) {
       fs.mkdirSync(dest, { recursive: true });
       return;
     }

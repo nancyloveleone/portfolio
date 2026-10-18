@@ -41,7 +41,7 @@ Open `src/data/site-config.json` in any text editor:
   "subheadline": "Meet Nancy Leone — an aspiring model from Denver with a bold personality, a playful spirit, and ambitions of becoming a household name.",
   "ctaText": "Explore Portfolio",
   "secondaryCtaText": "About Nancy",
-  "backgroundImage": "/images/hero/hero-main.png"
+  "backgroundImage": "https://s8d8.turboimg.net/sp/030f042f91cadbc7ce8150ddd3118d99/50.png"
 }
 ```
 
@@ -50,7 +50,7 @@ Open `src/data/site-config.json` in any text editor:
 "about": {
   "label": "About Nancy Leone",
   "heading": "Ready to Bring Energy, Style, and Bold Personality",
-  "portraitImage": "/images/hero/about-portrait.png",
+  "portraitImage": "https://s8d8.turboimg.net/sp/03143d702f7349ff62505cd2927f40ba/28.png",
   "biography": [
     "Nancy Leone is an amateur model from Denver with big dreams and a distinctive personality.",
     "With her sights set on international recognition and the ambition to grace the cover of Playboy, Nancy is ready to bring her own energy and style to the world of modeling."

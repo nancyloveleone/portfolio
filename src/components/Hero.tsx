@@ -21,6 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePortfolio, onLearnMore }) =
           className="hero-bg-img"
           loading="eager"
           decoding="async"
+          referrerPolicy="no-referrer"
         />
         <div className="hero-gradient-overlay" />
         <div className="hero-radial-overlay" />

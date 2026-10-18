@@ -15,8 +15,8 @@ dist-ssr
 *.bak
 import-reports/
 
-# Locally downloaded photoshoot albums (hosted on TurboImageHost CDN)
-public/images/albums/
+# Locally downloaded images (all photos, covers, and portraits are hosted on TurboImageHost CDN)
+public/images/
 
 # Editor directories and files
 .vscode/*
