@@ -1,0 +1,14 @@
+/* Root Application Layout Styles */
+.portfolio-app-root {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+}
+
+#main-content {
+  flex: 1;
+}

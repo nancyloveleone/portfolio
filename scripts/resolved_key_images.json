@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "pageUrl": "https://www.turboimagehost.com/p/130301320/50.png.html",
+    "directUrl": "https://s8d8.turboimg.net/sp/030f042f91cadbc7ce8150ddd3118d99/50.png",
+    "localPath": "public/images/hero/hero-main.png"
+  },
+  "hero_alt": {
+    "pageUrl": "https://www.turboimagehost.com/p/130301329/51.png.html",
+    "directUrl": "https://s8d8.turboimg.net/sp/a7aceaa779465dffb4ab2333be577f66/51.png",
+    "localPath": "public/images/hero/hero-alt.png"
+  },
+  "profile": {
+    "pageUrl": "https://www.turboimagehost.com/p/130301089/28.png.html",
+    "directUrl": "https://s8d8.turboimg.net/sp/03143d702f7349ff62505cd2927f40ba/28.png",
+    "localPath": "public/images/hero/about-portrait.png"
+  },
+  "cover_album1": {
+    "pageUrl": "https://www.turboimagehost.com/p/130301429/62.png.html",
+    "directUrl": "https://s8d8.turboimg.net/sp/651608a69620812e7713d88bc90e5bdb/62.png",
+    "localPath": "public/images/albums/nancy-leone-debut/cover.png"
+  },
+  "cover_album2": {
+    "pageUrl": "https://www.turboimagehost.com/p/130305043/94147ac9-c025-497.._207180641.png.html",
+    "directUrl": "https://s8d8.turboimg.net/sp/54666155960d61b1be4fc501bed4a693/94147ac9-c025-497.._207180641.png",
+    "localPath": "public/images/albums/nancy-leone-greek-goddess/cover.png"
+  }
+}

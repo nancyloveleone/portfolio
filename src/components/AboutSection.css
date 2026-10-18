@@ -1,0 +1,169 @@
+.about-section {
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .about-grid {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+/* Portrait & Comp Card Visual */
+.about-portrait-card {
+  position: relative;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: 2px;
+  padding: 1rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.about-portrait-wrapper {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #0c0c0c;
+  border-radius: 2px;
+}
+
+.about-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.92) contrast(1.05);
+}
+
+.about-portrait-caption {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Measurements & Details */
+.about-bio-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.measurements-container {
+  margin-top: 2.5rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  padding: 1.75rem;
+}
+
+.measurements-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.measurements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2rem;
+}
+
+@media (min-width: 600px) {
+  .measurements-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.measurement-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.measurement-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.measurement-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Agencies Grid */
+.agencies-section-block {
+  margin-top: 2.5rem;
+}
+
+.agencies-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.agencies-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .agencies-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.agency-card {
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: border-color var(--transition-fast);
+}
+
+.agency-card:hover {
+  border-color: var(--accent-gold);
+}
+
+.agency-city {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.agency-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
