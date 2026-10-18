@@ -4,11 +4,13 @@ import https from 'node:https';
 const r1 = JSON.parse(fs.readFileSync('scripts/resolved_album1.json', 'utf-8'));
 const r2 = JSON.parse(fs.readFileSync('scripts/resolved_album2.json', 'utf-8'));
 const r3 = JSON.parse(fs.readFileSync('scripts/resolved_album3.json', 'utf-8'));
+const r4 = JSON.parse(fs.readFileSync('scripts/resolved_album4.json', 'utf-8'));
 const keys = JSON.parse(fs.readFileSync('scripts/resolved_key_images.json', 'utf-8'));
 
 const cover1 = keys.cover_album1.directUrl;
 const cover2 = keys.cover_album2.directUrl;
 const cover3 = 'https://s8d8.turboimg.net/sp/8cde9a55aef3c77d927688433198242c/44.png';
+const cover4 = 'https://s8d8.turboimg.net/sp/121be4a8a1977515e9802dc79a958df6/17.png';
 
 console.log('='.repeat(70));
 console.log('COMPREHENSIVE REMOTE URL AUDIT');
@@ -17,11 +19,13 @@ console.log('='.repeat(70));
 const items1 = Object.values(r1).sort((a, b) => a.index - b.index);
 const items2 = Object.values(r2).sort((a, b) => a.index - b.index);
 const items3 = Object.values(r3).sort((a, b) => a.index - b.index);
+const items4 = Object.values(r4).sort((a, b) => a.index - b.index);
 
 console.log(`Album 1: ${items1.length} items`);
 console.log(`Album 2: ${items2.length} items`);
 console.log(`Album 3: ${items3.length} items`);
-console.log(`Total Album Photos: ${items1.length + items2.length + items3.length}`);
+console.log(`Album 4: ${items4.length} items`);
+console.log(`Total Album Photos: ${items1.length + items2.length + items3.length + items4.length}`);
 
 function checkUrl(url) {
   return new Promise(resolve => {
@@ -95,16 +99,18 @@ async function run() {
   const a1 = await verifyAlbum('Album 1 (Debut)', items1, cover1);
   const a2 = await verifyAlbum('Album 2 (Greek Goddess)', items2, cover2);
   const a3 = await verifyAlbum('Album 3 (Green Saree)', items3, cover3);
+  const a4 = await verifyAlbum('Album 4 (White Pearl Goddess)', items4, cover4);
 
   console.log('\n' + '='.repeat(70));
   console.log('AUDIT SUMMARY:');
   console.log(`Hero & Portrait: ${[heroRes, altRes, portRes].filter(r => r.status === 200).length}/3 OK`);
-  console.log(`Total Albums Audited: 3`);
+  console.log(`Total Albums Audited: 4`);
   console.log(`Album 1: ${a1.okDirect}/${items1.length} photos OK`);
   console.log(`Album 2: ${a2.okDirect}/${items2.length} photos OK`);
   console.log(`Album 3: ${a3.okDirect}/${items3.length} photos OK`);
+  console.log(`Album 4: ${a4.okDirect}/${items4.length} photos OK`);
   const keyFails = [heroRes, altRes, portRes].filter(r => r.status !== 200).length;
-  const totalFail = keyFails + a1.failDirect + a2.failDirect + a3.failDirect + a1.failThumb + a2.failThumb + a3.failThumb;
+  const totalFail = keyFails + a1.failDirect + a2.failDirect + a3.failDirect + a4.failDirect + a1.failThumb + a2.failThumb + a3.failThumb + a4.failThumb;
   console.log(`Total Failures: ${totalFail}`);
   console.log('='.repeat(70));
 }
