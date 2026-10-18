@@ -97,10 +97,12 @@ export const LightboxViewer: React.FC<LightboxViewerProps> = ({
 
     if (photographs[nextIdx]?.src) {
       const imgNext = new Image();
+      imgNext.referrerPolicy = 'no-referrer';
       imgNext.src = photographs[nextIdx].src;
     }
     if (photographs[prevIdx]?.src) {
       const imgPrev = new Image();
+      imgPrev.referrerPolicy = 'no-referrer';
       imgPrev.src = photographs[prevIdx].src;
     }
   }, [currentIndex, photographs, totalCount]);
@@ -321,6 +323,7 @@ export const LightboxViewer: React.FC<LightboxViewerProps> = ({
             className="lightbox-main-img"
             loading="eager"
             decoding="async"
+            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -383,6 +386,8 @@ export const LightboxViewer: React.FC<LightboxViewerProps> = ({
                   alt=""
                   className="filmstrip-thumb-img"
                   loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                 />
               </button>
             ))}

@@ -8,10 +8,11 @@ A responsive, production-quality photography portfolio website built for **Nancy
 
 - **Dark Luxury Aesthetics**: Dark obsidian palette (`#090909`, `#141414`, `#1D1D1D`) with Champagne Gold (`#D6B56D`, `#F2CE74`) accents and typography pairing (`Playfair Display`, `Cormorant Garamond`, `Plus Jakarta Sans`).
 - **100svh Hero Landing**: Viewport-height landing cover with centered portrait presentation on mobile and desktop, authentic headline, and booking actions.
-- **Curated Photoshoot Albums**:
-  - **Nancy Leone Debut Photoshoot**: 77 verified high-resolution photographs with preferred cover.
-  - **Nancy Leone Showing it like Greek Goddess**: 89 verified high-resolution photographs with preferred cover.
-  - **Nancy Leone in Green Saree**: 61 verified high-resolution photographs with preferred cover.
+- **Curated Photoshoot Albums (Remote CDN Streaming)**:
+  - **Nancy Leone Debut Photoshoot**: 77 verified high-resolution photographs streaming via CDN.
+  - **Nancy Leone Showing it like Greek Goddess**: 89 verified high-resolution photographs streaming via CDN.
+  - **Nancy Leone in Green Saree**: 61 verified high-resolution photographs streaming via CDN.
+  - Zero local album photo bundling: all 227 photographs and covers stream directly from TurboImageHost CDN (`s8d8.turboimg.net`), resulting in lightweight builds and zero disk bloat.
 - **Full-Screen Photography Lightbox**:
   - Fullscreen API support (toggle with `F` key or on-screen button).
   - Uncompromised aspect ratios (`object-fit: contain`).
@@ -49,22 +50,20 @@ A responsive, production-quality photography portfolio website built for **Nancy
 ├── README.md                 # Project architecture & developer documentation
 ├── vercel.json               # Vercel deployment & cache optimization config
 ├── package.json              # Dependencies and run scripts
-├── index.html                # Entry HTML with Google Fonts & SEO tags
+├── index.html                # Entry HTML with Google Fonts, SEO & no-referrer policy
 ├── public/
 │   ├── favicon.svg           # NL monogram favicon
 │   └── images/
 │       ├── hero/             # Hero & portrait image assets (hero-main.png, about-portrait.png, hero-alt.png)
-│       └── albums/           # Photoshoot album folders
-│           ├── nancy-leone-debut/
-│           ├── nancy-leone-greek-goddess/
-│           └── nancy-leone-green-saree/
+│       └── albums/           # (Excluded via .gitignore; albums stream from CDN)
 ├── src/
 │   ├── types/
 │   │   └── index.ts          # TypeScript interfaces for albums, photos, & config
 │   ├── data/
 │   │   ├── site-config.json  # Brand copy, model name, bio
-│   │   ├── albums.json       # Centralized album manifest (227 verified photos)
+│   │   ├── albums.json       # Centralized album manifest (227 verified remote CDN photos)
 │   │   └── index.ts          # Typed data exports and query helpers
+
 │   ├── components/
 │   │   ├── Navbar.tsx        # Responsive navigation with mobile drawer
 │   │   ├── Hero.tsx          # Centered 100svh opening hero with CTA actions

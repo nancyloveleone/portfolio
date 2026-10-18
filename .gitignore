@@ -12,7 +12,11 @@ dist
 dist-ssr
 *.local
 *.zip
+*.bak
 import-reports/
+
+# Locally downloaded photoshoot albums (hosted on TurboImageHost CDN)
+public/images/albums/
 
 # Editor directories and files
 .vscode/*

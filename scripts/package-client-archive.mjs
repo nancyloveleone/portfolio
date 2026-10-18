@@ -35,6 +35,11 @@ const INCLUDED_DIRS = [
 function copyRecursive(src, dest) {
   const stat = fs.statSync(src);
   if (stat.isDirectory()) {
+    // Skip public/images/albums
+    if (src.endsWith(path.join('public', 'images', 'albums'))) {
+      fs.mkdirSync(dest, { recursive: true });
+      return;
+    }
     fs.mkdirSync(dest, { recursive: true });
     for (const child of fs.readdirSync(src)) {
       copyRecursive(path.join(src, child), path.join(dest, child));
@@ -43,6 +48,7 @@ function copyRecursive(src, dest) {
     fs.copyFileSync(src, dest);
   }
 }
+
 
 async function run() {
   console.log('='.repeat(70));

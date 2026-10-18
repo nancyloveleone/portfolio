@@ -75,7 +75,9 @@ export const FeaturedAlbums: React.FC<FeaturedAlbumsProps> = ({ onOpenAlbum }) =
                     className="album-cover-img"
                     loading="lazy"
                     decoding="async"
+                    referrerPolicy="no-referrer"
                   />
+
                   <div className="album-gradient-scrim" />
 
                   <div className="album-badge-top">

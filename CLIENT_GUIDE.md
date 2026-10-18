@@ -12,7 +12,9 @@ All content is managed in simple, human-readable data files:
 |---|---|
 | **Name, Bio, Tagline, Market** | `src/data/site-config.json` |
 | **Photo Albums & Photograph Listings** | `src/data/albums.json` |
-| **Local Images (Hero, Portrait, Covers)** | `public/images/` |
+| **Brand Hero & Portrait Assets** | `public/images/hero/` |
+| **Photoshoot Album Images & Covers** | Remote CDN via `src/data/albums.json` |
+
 
 ---
 
@@ -72,6 +74,8 @@ Your website is currently configured with three verified collections:
 1. **Nancy Leone Debut Photoshoot** (77 verified photographs)
 2. **Nancy Leone Showing it like Greek Goddess** (89 verified photographs)
 3. **Nancy Leone in Green Saree** (61 verified photographs)
+
+All photoshoot albums and cover images stream directly from TurboImageHost's high-speed CDN servers (`s8d8.turboimg.net`), meaning your website builds in seconds and requires zero gigabytes of local media storage.
 
 
 ### Adding a New Album from TurboImageHost
