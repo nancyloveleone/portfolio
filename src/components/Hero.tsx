@@ -13,16 +13,30 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePortfolio, onLearnMore }) =
 
   return (
     <section className="hero-section" id="home" aria-label="Hero Overview">
-      {/* Background Image Container */}
+      {/* Background Container - Responsive GIF background on repeat */}
       <div className="hero-background-wrapper" aria-hidden="true">
-        <img
-          src={hero.backgroundImage}
-          alt=""
-          className="hero-bg-img"
-          loading="eager"
-          decoding="async"
-          referrerPolicy="no-referrer"
-        />
+        <picture className="hero-bg-picture">
+          {hero.desktopBackgroundGif && (
+            <>
+              <source
+                media="(min-width: 1024px)"
+                srcSet={hero.desktopBackgroundGif}
+              />
+              <source
+                media="(min-width: 768px) and (min-aspect-ratio: 1/1)"
+                srcSet={hero.desktopBackgroundGif}
+              />
+            </>
+          )}
+          <img
+            src={hero.mobileBackgroundGif || hero.desktopBackgroundGif || hero.backgroundImage}
+            alt=""
+            className="hero-bg-img"
+            loading="eager"
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+        </picture>
         <div className="hero-gradient-overlay" />
         <div className="hero-radial-overlay" />
       </div>

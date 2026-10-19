@@ -11,7 +11,9 @@
     "ctaText": "Explore Portfolio",
     "secondaryCtaText": "About Nancy",
     "backgroundImage": "https://s8d8.turboimg.net/sp/030f042f91cadbc7ce8150ddd3118d99/50.png",
-    "alternativeHeroImage": "https://s8d8.turboimg.net/sp/a7aceaa779465dffb4ab2333be577f66/51.png"
+    "alternativeHeroImage": "https://s8d8.turboimg.net/sp/a7aceaa779465dffb4ab2333be577f66/51.png",
+    "desktopBackgroundGif": "https://s8d3.turboimg.net/sp/88b2b48ceee351dfb3d148b45146433b/3848574778749636065.gif?11684",
+    "mobileBackgroundGif": "https://s8d3.turboimg.net/sp/2250a3047c04676c44b3d4559ab26869/image_to_video1792133108992.gif?14266"
   },
   "about": {
     "label": "About Nancy Leone",

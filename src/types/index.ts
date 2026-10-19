@@ -64,6 +64,8 @@ export interface SiteConfig {
     secondaryCtaText?: string;
     backgroundImage: string;
     alternativeHeroImage?: string;
+    desktopBackgroundGif?: string;
+    mobileBackgroundGif?: string;
     highlights?: Array<{ label: string; value: string }>;
   };
   about: {
